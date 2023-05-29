@@ -7,7 +7,7 @@ This repository showcases the steps to build a NextJS full stack application ste
 - NextJS 13
 - Typescript
 - ESLint & Prettier
-- Tailwind CSS
+- Tailwind CSS (with Wind UI components)
 
 ## Application Features
 
