@@ -8,10 +8,10 @@ export interface props {
 
 const Layout = ({ children }: props) => {
   return (
-    <Fragment>
+    <>
       <Header />
       <div>{children}</div>
-    </Fragment>
+    </>
   );
 };
 
