@@ -10,23 +10,27 @@ import {
   Image,
   Button
 } from '@nextui-org/react';
+import React from 'react';
 
-const EventCard = () => {
+interface EventCardProps {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  location: string;
+}
+
+const EventCard: React.FC<EventCardProps> = (props) => {
+  const { title, description, image, date, location } = props;
   return (
     <Card className="max-w-md">
       <CardHeader className="flex">
-        <Image src="/card-photo.jpeg" />
+        <Image src={image} />
       </CardHeader>
       <CardBody>
-        <p className="mt-0.5 text-xl font-semibold text-gray-800">
-          How to position your furniture for positivity
-        </p>
+        <p className="mt-0.5 text-xl font-semibold text-gray-800">{title}</p>
         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-          dolores, possimus pariatur animi temporibus nesciunt praesentium
-          dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
-          soluta, voluptates neque explicabo tempora nisi culpa eius atque
-          dignissimos. Molestias explicabo corporis voluptatem?
+          {description}
         </p>
       </CardBody>
       <Divider />
@@ -38,11 +42,8 @@ const EventCard = () => {
                 <div>
                   <FaCalendarDay size={30} />
                 </div>
-                <time
-                  dateTime="09-01-2023"
-                  className="text-md pl-2 text-gray-600"
-                >
-                  10th Oct 2022
+                <time dateTime={date} className="text-md pl-2 text-gray-600">
+                  {date}
                 </time>
               </div>
               <div className="flex max-w-sm items-center">
@@ -50,7 +51,7 @@ const EventCard = () => {
                   <BiMap size={30} />
                 </div>
                 <span className="text-md pl-1 text-gray-600 max-w-[150px]">
-                  123 Any Street Anywhere AL
+                  {location}
                 </span>
               </div>
             </div>
