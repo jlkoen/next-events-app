@@ -28,6 +28,16 @@ const DUMMY_EVENTS = [
     date: '2022-04-10',
     image: 'images/extrovert-event.jpg',
     isFeatured: true
+  },
+  {
+    id: 'e4',
+    title: 'Cake eating for beginners',
+    description:
+      'You have probably eaten cake before - but have you ever eaten the entire cake?',
+    location: 'Cake Factory, 12345 Baking Street',
+    date: '2021-05-30',
+    image: 'images/cake-event.jpg',
+    isFeatured: false
   }
 ];
 

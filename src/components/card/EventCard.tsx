@@ -13,6 +13,7 @@ import {
 import React from 'react';
 
 interface EventCardProps {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -21,10 +22,11 @@ interface EventCardProps {
 }
 
 const EventCard: React.FC<EventCardProps> = (props) => {
-  const { title, description, image, date, location } = props;
+  const { title, description, image, date, location, id } = props;
   return (
-    <Card className="max-w-md">
+    <Card className="max-w-md" key={id}>
       <CardHeader className="flex">
+        {id}
         <Image src={image} />
       </CardHeader>
       <CardBody>
